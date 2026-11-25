@@ -15,6 +15,7 @@ Read only the part that matches your goal:
 
 | You want to… | Start here | Then |
 |---|---|---|
+| Use it, whatever your role | [docs/PLAYBOOK.md](docs/PLAYBOOK.md): eight plays, from a 10-minute look to adopting it in your CI | Pick the row for your role |
 | Understand the idea | [§1 The framework in one page](#1-the-framework-in-one-page) | [§3 Walkthrough](#3-end-to-end-walkthrough) for one change from request to production |
 | Try it in five minutes | [§4 Install](#4-install), then `.venv/bin/python scripts/product.py run --example` | [§5.5](#55-build-a-product-of-your-own-you-decide-agents-build): you make every human decision; `run --example java` shows the same change on a Java/Spring stack |
 | Build your own product | [§5.5 Build a product of your own](#55-build-a-product-of-your-own-you-decide-agents-build) | Pick your stack and write instruction files (§5.5, *Choose your stack*), then run with `--claude` |
@@ -650,6 +651,8 @@ The mutant tests show the trial oracles can fail.
 - **[docs/FRAMEWORK.md](docs/FRAMEWORK.md)**: an easy-reading explanation of the framework. It covers the
   problem, what AIDLC-G is trying to solve, why it was built, the theoretical foundations and how the
   parts fit together, with diagrams and a glossary. Start here if you are new to AIDLC-G.
+- **[docs/PLAYBOOK.md](docs/PLAYBOOK.md)**: how to use AIDLC-G, by role: see it work, try to break it, run
+  your own change, call the gate as a service, adopt it piece by piece in CI, tune the policy.
 - **[docs/BENCHMARK.md](docs/BENCHMARK.md)**: gate decision time as the store grows.
 - **Research papers** that report these results are in preparation. Preprints will be linked here.
 - **Feedback** is welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Results from settings other than the
