@@ -13,4 +13,4 @@ M5: read-only operational support agent, Template K incident packets, human-only
     incident authority, seeded incident study with evidence ablations.
 """
 
-__version__ = "0.8.0"
+__version__ = "0.8.1"
