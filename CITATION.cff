@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "AIDLC-G: reference implementation of evidence-carrying lifecycle transitions for agentic software engineering"
+type: software
+authors:
+  - family-names: Gopalsamy
+    given-names: Lakshmi Priya
+version: 0.8.0
+date-released: 2026-11-09
+license: MIT
+# Fill in before publishing: repository-code and the Zenodo DOI.
+repository-code: "https://github.com/lakshmipriyagopalsamy/aidlc-g"
+# doi: "10.5281/zenodo.<id>"

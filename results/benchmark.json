@@ -1,0 +1,43 @@
+{
+  "environment": {
+    "version": "0.8.0",
+    "python": "3.9.6",
+    "machine": "arm64",
+    "date": "25 Nov 2026",
+    "runs_per_size": 5
+  },
+  "rows": [
+    {
+      "stored_contracts": 0,
+      "audit_entries": 56,
+      "transition_ms": 0.51,
+      "release_gate_ms": 1.06,
+      "lifecycle_ms": 7.3,
+      "peak_mb": 0.2
+    },
+    {
+      "stored_contracts": 1000,
+      "audit_entries": 2056,
+      "transition_ms": 0.59,
+      "release_gate_ms": 0.94,
+      "lifecycle_ms": 8.1,
+      "peak_mb": 0.2
+    },
+    {
+      "stored_contracts": 5000,
+      "audit_entries": 10056,
+      "transition_ms": 0.54,
+      "release_gate_ms": 1.08,
+      "lifecycle_ms": 7.5,
+      "peak_mb": 0.2
+    },
+    {
+      "stored_contracts": 20000,
+      "audit_entries": 40056,
+      "transition_ms": 0.61,
+      "release_gate_ms": 1.36,
+      "lifecycle_ms": 8.3,
+      "peak_mb": 0.2
+    }
+  ]
+}

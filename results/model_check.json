@@ -1,0 +1,102 @@
+{
+  "models": {
+    "approvals (P1-P3)": {
+      "holds": true,
+      "states": 80601,
+      "transitions": 158400
+    },
+    "attestations (P4)": {
+      "holds": true,
+      "states": 22,
+      "transitions": 22
+    },
+    "race (P5)": {
+      "holds": true,
+      "states": 4,
+      "transitions": 4
+    },
+    "rollback (P6)": {
+      "holds": true,
+      "states": 3,
+      "transitions": 2
+    }
+  },
+  "mutants": {
+    "no invalidation on change": {
+      "model": "approvals (P1-P3)",
+      "caught": true,
+      "violation": "P2 approval of C2 by eng still counts after an upstream change",
+      "trace": [
+        "approve C2 by eng",
+        "revise C1"
+      ],
+      "states": 22
+    },
+    "no role or human check on approval": {
+      "model": "approvals (P1-P3)",
+      "caught": true,
+      "violation": "P3 approval of C1 by bot (author or agent) counts",
+      "trace": [
+        "approve C1 by bot"
+      ],
+      "states": 5
+    },
+    "author may approve own artifact": {
+      "model": "approvals (P1-P3)",
+      "caught": true,
+      "violation": "P3 approval of C3 by author (author or agent) counts",
+      "trace": [
+        "approve C3 by author"
+      ],
+      "states": 7
+    },
+    "replayed attestation accepted": {
+      "model": "attestations (P4)",
+      "caught": true,
+      "violation": "P4 an attestation id was accepted twice",
+      "trace": [
+        "register build",
+        "accept attestation 0",
+        "accept attestation 0"
+      ],
+      "states": 9
+    },
+    "attestation not bound to current manifest": {
+      "model": "attestations (P4)",
+      "caught": true,
+      "violation": "P4 an attestation was accepted for a build bound to an old manifest",
+      "trace": [
+        "register build",
+        "manifest changes, build kept",
+        "accept attestation 0"
+      ],
+      "states": 15
+    },
+    "transition commits without compare-and-set": {
+      "model": "race (P5)",
+      "caught": true,
+      "violation": "P5 the same transition was admitted twice",
+      "trace": [
+        "request 0 evaluated",
+        "request 1 evaluated",
+        "request 0 committed without re-check",
+        "request 1 committed without re-check"
+      ],
+      "states": 8
+    },
+    "agent may request rollback": {
+      "model": "rollback (P6)",
+      "caught": true,
+      "violation": "P6 rollback without a human decision",
+      "trace": [
+        "operations agent requests rollback"
+      ],
+      "states": 2
+    }
+  },
+  "bounds": {
+    "versions_per_artifact": 2,
+    "attestation_ids": 2,
+    "racing_requests": 2
+  }
+}

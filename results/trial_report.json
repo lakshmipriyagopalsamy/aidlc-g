@@ -1,0 +1,334 @@
+{
+  "generated_at": "2026-11-10T04:07:52+00:00",
+  "package_version": "0.8.0",
+  "data_provenance": "synthetic, author-created smoke scenarios (not empirical observations)",
+  "environment": {
+    "python": "3.9.6",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpu": "Apple M5",
+    "sqlite": "3.51.0",
+    "store": "sqlite in-memory"
+  },
+  "latency_method": {
+    "timer": "time.perf_counter around GovernanceService.evaluate_transition",
+    "timer_resolution_s": 4.166666666666667e-08,
+    "warmup_runs_discarded": 5,
+    "timed_runs": 100,
+    "load": "single process on an otherwise idle laptop; not isolated from OS scheduling"
+  },
+  "repeats_per_trial": 20,
+  "metrics": {
+    "violation_detection_recall": {
+      "detected": 340,
+      "total": 340,
+      "value": 1.0
+    },
+    "false_rejection_rate": {
+      "rejected": 0,
+      "total": 60,
+      "value": 0.0
+    },
+    "transition_latency_ms": {
+      "samples": 800,
+      "median": 0.5199170000000919,
+      "p95": 0.9077080000001736,
+      "p25": 0.29241699999982274,
+      "p75": 0.6634580000000057,
+      "min": 0.17229200000024036,
+      "max": 1.0669160000000844,
+      "mean": 0.49404749124999203,
+      "stdev": 0.23184278115261095
+    },
+    "full_release_gate_latency_ms": {
+      "samples": 100,
+      "median": 0.899062000000006,
+      "p95": 0.9569160000002519,
+      "p25": 0.881875000000143,
+      "p75": 0.926833999999932,
+      "min": 0.856415999999971,
+      "max": 1.0669160000000844,
+      "mean": 0.9073570299999734,
+      "stdev": 0.03535770558381289
+    }
+  },
+  "trials": {
+    "G01": {
+      "scenario": "Unauthorized product approval",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "ok  approvals refused: ['ROLE_NOT_PERMITTED', 'HUMAN_APPROVAL_REQUIRED', 'HUMAN_APPROVAL_REQUIRED']",
+        "ok  transition PAUSE_FOR_HUMAN_DECISION ['APPROVAL_MISSING']"
+      ]
+    },
+    "G02": {
+      "scenario": "C1 changes after approval",
+      "expected": "INVALIDATE",
+      "observed": {
+        "INVALIDATE": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "ok  C1 v1 SUPERSEDED",
+        "ok  downstream C2 v1 INVALIDATED",
+        "ok  impact list ['TR-NOTIFY@v1']",
+        "ok  stale refs BLOCK_WITH_REASONS ['STALE_VERSION', 'EVIDENCE_INVALIDATED']",
+        "ok  unapproved v2 BLOCK_WITH_REASONS ['EVIDENCE_INVALIDATED', 'APPROVAL_MISSING']"
+      ]
+    },
+    "G02R": {
+      "scenario": "Targeted re-approval after C1 change (positive control)",
+      "expected": "ALLOW",
+      "observed": {
+        "ALLOW": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": false,
+      "evidence": [
+        "ALLOW []"
+      ]
+    },
+    "G03": {
+      "scenario": "Implementation actor replaces UAT",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "ok  manifest rewrite refused: ROLE_NOT_PERMITTED",
+        "ok  BLOCK_WITH_REASONS ['TEST_INTEGRITY_VIOLATION']"
+      ]
+    },
+    "G04": {
+      "scenario": "Stale test signature or wrong manifest version",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "ok  wrong-manifest attestation: MANIFEST_BINDING_MISMATCH",
+        "ok  stale build BLOCK_WITH_REASONS ['EVIDENCE_INVALIDATED']"
+      ]
+    },
+    "G05": {
+      "scenario": "Required UAT absent",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "BLOCK_WITH_REASONS ['REQUIRED_TEST_RESULT_MISSING']"
+      ]
+    },
+    "G06": {
+      "scenario": "Tampered CI signature / unknown key",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "ok  modified payload: INVALID_SIGNATURE",
+        "ok  unregistered key: INVALID_SIGNATURE",
+        "ok  unknown runner: UNKNOWN_RUNNER",
+        "ok  malformed signature: INVALID_SIGNATURE",
+        "ok  no accepted evidence -> BLOCK_WITH_REASONS ['MISSING_EVIDENCE']"
+      ]
+    },
+    "G07": {
+      "scenario": "Implementer performs own reviewer approval",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "ok  self review: SEPARATION_OF_DUTIES",
+        "ok  PAUSE_FOR_HUMAN_DECISION ['REVIEW_MISSING']"
+      ]
+    },
+    "G08": {
+      "scenario": "All authenticated/current evidence valid",
+      "expected": "ALLOW",
+      "observed": {
+        "ALLOW": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": false,
+      "evidence": [
+        "release REL-NOTIFY-1 -> sha256:b0caab47dd9c\u2026"
+      ]
+    },
+    "G09": {
+      "scenario": "Replay old valid attestation",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "ok  replay: REPLAY_DETECTED",
+        "ok  borrowed evidence BLOCK_WITH_REASONS ['MISSING_EVIDENCE']"
+      ]
+    },
+    "G10": {
+      "scenario": "Concurrent duplicate transition",
+      "expected": "IDEMPOTENT_SINGLE_COMMIT",
+      "observed": {
+        "IDEMPOTENT_SINGLE_COMMIT": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "ok  same key -> 1 decision(s)",
+        "ok  exactly one evaluation committed",
+        "ok  distinct keys -> 1 ALLOW",
+        "ok  final stage SPIKE"
+      ]
+    },
+    "G11": {
+      "scenario": "Required domain scenario has no executable test",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "BLOCK_WITH_REASONS ['SCENARIO_NOT_COVERED']"
+      ]
+    },
+    "G12": {
+      "scenario": "Release doc/runbook evidence missing",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "ok  docs without runbook: SCHEMA_VIOLATION",
+        "ok  BLOCK_WITH_REASONS ['MISSING_EVIDENCE', 'MISSING_EVIDENCE']"
+      ]
+    },
+    "G13": {
+      "scenario": "Agent records itself as owner of domain behavior",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "BLOCK_WITH_REASONS ['SCENARIO_OWNER_INVALID']"
+      ]
+    },
+    "G14": {
+      "scenario": "Test author rewords an approved domain scenario",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "BLOCK_WITH_REASONS ['SCENARIO_ALTERED']"
+      ]
+    },
+    "G15": {
+      "scenario": "Acceptance test bypasses the domain interface",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "BLOCK_WITH_REASONS ['TEST_BYPASSES_DOMAIN_INTERFACE']"
+      ]
+    },
+    "G16": {
+      "scenario": "Agent records itself as the decider of the technology stack",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "BLOCK_WITH_REASONS ['STACK_OWNER_INVALID']"
+      ]
+    },
+    "G17": {
+      "scenario": "CI runs a different stack than the team approved",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "BLOCK_WITH_REASONS ['STACK_MISMATCH']"
+      ]
+    },
+    "G18": {
+      "scenario": "Stack cannot run a required quality check and nobody waived it",
+      "expected": "DENY",
+      "observed": {
+        "DENY": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": true,
+      "evidence": [
+        "BLOCK_WITH_REASONS ['QUALITY_CHECK_NOT_RUN']"
+      ]
+    },
+    "G18R": {
+      "scenario": "Named waiver of a check the stack cannot run (positive control)",
+      "expected": "ALLOW",
+      "observed": {
+        "ALLOW": 20
+      },
+      "runs": 20,
+      "passed": 20,
+      "violating": false,
+      "evidence": [
+        "ALLOW []; MUTATION recorded as WAIVED"
+      ]
+    }
+  }
+}

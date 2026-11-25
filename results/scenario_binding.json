@@ -1,0 +1,549 @@
+{
+  "text_cases": [
+    {
+      "family": "semantic",
+      "perturbation": "negation toggled",
+      "scenario": "SC-1",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "negation toggled",
+      "scenario": "SC-2",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "negation toggled",
+      "scenario": "SC-3",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "negation toggled",
+      "scenario": "SC-4",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "outcome weakened",
+      "scenario": "SC-1",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "outcome weakened",
+      "scenario": "SC-2",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "outcome weakened",
+      "scenario": "SC-3",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "outcome weakened",
+      "scenario": "SC-4",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "condition dropped",
+      "scenario": "SC-1",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "condition dropped",
+      "scenario": "SC-2",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "condition dropped",
+      "scenario": "SC-3",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "condition dropped",
+      "scenario": "SC-4",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "actor swapped",
+      "scenario": "SC-1",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "actor swapped",
+      "scenario": "SC-2",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "actor swapped",
+      "scenario": "SC-3",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "actor swapped",
+      "scenario": "SC-4",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "scope widened",
+      "scenario": "SC-1",
+      "field": "when",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "scope widened",
+      "scenario": "SC-2",
+      "field": "when",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "scope widened",
+      "scenario": "SC-3",
+      "field": "when",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "scope widened",
+      "scenario": "SC-4",
+      "field": "when",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "outcome replaced",
+      "scenario": "SC-1",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "outcome replaced",
+      "scenario": "SC-2",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "outcome replaced",
+      "scenario": "SC-3",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "semantic",
+      "perturbation": "outcome replaced",
+      "scenario": "SC-4",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "double space",
+      "scenario": "SC-1",
+      "field": "when",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "double space",
+      "scenario": "SC-2",
+      "field": "when",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "double space",
+      "scenario": "SC-3",
+      "field": "when",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "double space",
+      "scenario": "SC-4",
+      "field": "when",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "trailing period",
+      "scenario": "SC-1",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "trailing period",
+      "scenario": "SC-2",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "trailing period",
+      "scenario": "SC-3",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "trailing period",
+      "scenario": "SC-4",
+      "field": "then",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "capitalized",
+      "scenario": "SC-1",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "capitalized",
+      "scenario": "SC-2",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "capitalized",
+      "scenario": "SC-3",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "capitalized",
+      "scenario": "SC-4",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "typographic apostrophe or no-break space",
+      "scenario": "SC-1",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "typographic apostrophe or no-break space",
+      "scenario": "SC-2",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "typographic apostrophe or no-break space",
+      "scenario": "SC-3",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    },
+    {
+      "family": "presentation",
+      "perturbation": "typographic apostrophe or no-break space",
+      "scenario": "SC-4",
+      "field": "given",
+      "changed": true,
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_ALTERED"
+      ],
+      "caught": true
+    }
+  ],
+  "structural_cases": [
+    {
+      "case": "scenario dropped from C3",
+      "expected": "SCENARIO_NOT_COVERED",
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_NOT_COVERED"
+      ],
+      "caught": true
+    },
+    {
+      "case": "scenario invented in C3",
+      "expected": "SCENARIO_NOT_IN_C1",
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_NOT_IN_C1"
+      ],
+      "caught": true
+    },
+    {
+      "case": "missing behavior proposed",
+      "expected": "DOMAIN_PROPOSAL_PENDING",
+      "decision": "PAUSE_FOR_HUMAN_DECISION",
+      "codes": [
+        "DOMAIN_PROPOSAL_PENDING"
+      ],
+      "caught": true
+    },
+    {
+      "case": "test bindings swapped between two scenarios",
+      "expected": "NONE",
+      "decision": "ALLOW",
+      "codes": [],
+      "caught": false
+    },
+    {
+      "case": "agent recorded as scenario owner",
+      "expected": "SCENARIO_OWNER_INVALID",
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "SCENARIO_OWNER_INVALID"
+      ],
+      "caught": true
+    },
+    {
+      "case": "no negative or boundary scenario",
+      "expected": "NEGATIVE_SCENARIO_MISSING",
+      "decision": "BLOCK_WITH_REASONS",
+      "codes": [
+        "NEGATIVE_SCENARIO_MISSING"
+      ],
+      "caught": true
+    }
+  ],
+  "summary": {
+    "semantic_caught": 24,
+    "semantic_total": 24,
+    "presentation_caught": 16,
+    "presentation_total": 16,
+    "structural_as_expected": 5,
+    "structural_expected_total": 5,
+    "undetected": [
+      "test bindings swapped between two scenarios"
+    ]
+  }
+}

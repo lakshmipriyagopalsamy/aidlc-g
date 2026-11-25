@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aidlc-g"
+version = "0.8.0"
+description = "AIDLC-G reference evidence gate: C0-C3 contracts, signed CI attestations, fail-closed lifecycle transitions"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Lakshmi Priya Gopalsamy" }]
+dependencies = [
+    "cryptography>=42",
+    "pydantic>=2.6,<3",
+    "fastapi>=0.110",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "httpx>=0.27"]
+server = ["uvicorn>=0.29"]
+claude = ["anthropic"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

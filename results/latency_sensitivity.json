@@ -1,0 +1,459 @@
+{
+  "samples": 2000,
+  "seed": 2026,
+  "cases": [
+    {
+      "case": "HIGH (default)",
+      "released": true,
+      "effective_tier": "HIGH",
+      "human_decisions": 11,
+      "policy_authorizations": 0,
+      "waits": 9,
+      "people_asked": 12,
+      "schedule": [
+        {
+          "step": "decide/INIT-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "answer",
+          "people": 1
+        },
+        {
+          "step": "decide/BR-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "decide/TR-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "decide/STORIES-NOTIFY/1/False",
+          "people": 2
+        },
+        {
+          "step": "decide/AC-NOTIFY/1/False",
+          "people": 2
+        },
+        {
+          "step": "review",
+          "people": 1
+        },
+        {
+          "step": "decide/DOCS-NOTIFY/1/False",
+          "people": 2
+        },
+        {
+          "step": "decide/REL-NOTIFY-1/1/False",
+          "people": 1
+        }
+      ]
+    },
+    {
+      "case": "MEDIUM",
+      "released": true,
+      "effective_tier": "MEDIUM",
+      "human_decisions": 9,
+      "policy_authorizations": 3,
+      "waits": 8,
+      "people_asked": 9,
+      "schedule": [
+        {
+          "step": "decide/INIT-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "answer",
+          "people": 1
+        },
+        {
+          "step": "decide/BR-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "decide/TR-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "decide/AC-NOTIFY/1/False",
+          "people": 2
+        },
+        {
+          "step": "review",
+          "people": 1
+        },
+        {
+          "step": "decide/DOCS-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "decide/REL-NOTIFY-1/1/False",
+          "people": 1
+        }
+      ]
+    },
+    {
+      "case": "LOW, reviewer accepts a risk",
+      "released": true,
+      "effective_tier": "MEDIUM",
+      "human_decisions": 9,
+      "policy_authorizations": 3,
+      "waits": 8,
+      "people_asked": 9,
+      "schedule": [
+        {
+          "step": "decide/INIT-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "answer",
+          "people": 1
+        },
+        {
+          "step": "decide/BR-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "decide/AC-NOTIFY/1/False",
+          "people": 2
+        },
+        {
+          "step": "review",
+          "people": 1
+        },
+        {
+          "step": "decide/TR-NOTIFY/1/True",
+          "people": 1
+        },
+        {
+          "step": "decide/DOCS-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "decide/REL-NOTIFY-1/1/False",
+          "people": 1
+        }
+      ]
+    },
+    {
+      "case": "LOW, clean review",
+      "released": true,
+      "effective_tier": "LOW",
+      "human_decisions": 6,
+      "policy_authorizations": 6,
+      "waits": 5,
+      "people_asked": 6,
+      "schedule": [
+        {
+          "step": "decide/INIT-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "answer",
+          "people": 1
+        },
+        {
+          "step": "decide/BR-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "decide/AC-NOTIFY/1/False",
+          "people": 2
+        },
+        {
+          "step": "review",
+          "people": 1
+        }
+      ]
+    },
+    {
+      "case": "LOW, design lists a threat",
+      "released": true,
+      "effective_tier": "HIGH",
+      "human_decisions": 12,
+      "policy_authorizations": 0,
+      "waits": 9,
+      "people_asked": 12,
+      "schedule": [
+        {
+          "step": "decide/INIT-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "answer",
+          "people": 1
+        },
+        {
+          "step": "decide/BR-NOTIFY/1/False",
+          "people": 1
+        },
+        {
+          "step": "decide/TR-NOTIFY/1/True",
+          "people": 1
+        },
+        {
+          "step": "decide/STORIES-NOTIFY/1/False",
+          "people": 2
+        },
+        {
+          "step": "decide/AC-NOTIFY/1/False",
+          "people": 2
+        },
+        {
+          "step": "review",
+          "people": 1
+        },
+        {
+          "step": "decide/DOCS-NOTIFY/1/False",
+          "people": 2
+        },
+        {
+          "step": "decide/REL-NOTIFY-1/1/False",
+          "people": 1
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "median_minutes": 30,
+      "sigma": 0.5,
+      "case": "HIGH (default)",
+      "lead_p50_hours": 5.5,
+      "lead_p90_hours": 6.8,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 30,
+      "sigma": 0.5,
+      "case": "MEDIUM",
+      "lead_p50_hours": 4.6,
+      "lead_p90_hours": 5.9,
+      "reduction_vs_high_pct": 15
+    },
+    {
+      "median_minutes": 30,
+      "sigma": 0.5,
+      "case": "LOW, reviewer accepts a risk",
+      "lead_p50_hours": 4.6,
+      "lead_p90_hours": 5.9,
+      "reduction_vs_high_pct": 16
+    },
+    {
+      "median_minutes": 30,
+      "sigma": 0.5,
+      "case": "LOW, clean review",
+      "lead_p50_hours": 2.9,
+      "lead_p90_hours": 3.9,
+      "reduction_vs_high_pct": 46
+    },
+    {
+      "median_minutes": 30,
+      "sigma": 0.5,
+      "case": "LOW, design lists a threat",
+      "lead_p50_hours": 5.5,
+      "lead_p90_hours": 6.8,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 30,
+      "sigma": 1.0,
+      "case": "HIGH (default)",
+      "lead_p50_hours": 8.2,
+      "lead_p90_hours": 12.8,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 30,
+      "sigma": 1.0,
+      "case": "MEDIUM",
+      "lead_p50_hours": 6.4,
+      "lead_p90_hours": 10.9,
+      "reduction_vs_high_pct": 22
+    },
+    {
+      "median_minutes": 30,
+      "sigma": 1.0,
+      "case": "LOW, reviewer accepts a risk",
+      "lead_p50_hours": 6.4,
+      "lead_p90_hours": 10.8,
+      "reduction_vs_high_pct": 22
+    },
+    {
+      "median_minutes": 30,
+      "sigma": 1.0,
+      "case": "LOW, clean review",
+      "lead_p50_hours": 4.0,
+      "lead_p90_hours": 7.6,
+      "reduction_vs_high_pct": 51
+    },
+    {
+      "median_minutes": 30,
+      "sigma": 1.0,
+      "case": "LOW, design lists a threat",
+      "lead_p50_hours": 8.2,
+      "lead_p90_hours": 12.8,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 120,
+      "sigma": 0.5,
+      "case": "HIGH (default)",
+      "lead_p50_hours": 21.8,
+      "lead_p90_hours": 27.1,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 120,
+      "sigma": 0.5,
+      "case": "MEDIUM",
+      "lead_p50_hours": 18.4,
+      "lead_p90_hours": 23.3,
+      "reduction_vs_high_pct": 16
+    },
+    {
+      "median_minutes": 120,
+      "sigma": 0.5,
+      "case": "LOW, reviewer accepts a risk",
+      "lead_p50_hours": 18.4,
+      "lead_p90_hours": 23.3,
+      "reduction_vs_high_pct": 15
+    },
+    {
+      "median_minutes": 120,
+      "sigma": 0.5,
+      "case": "LOW, clean review",
+      "lead_p50_hours": 11.6,
+      "lead_p90_hours": 15.6,
+      "reduction_vs_high_pct": 47
+    },
+    {
+      "median_minutes": 120,
+      "sigma": 0.5,
+      "case": "LOW, design lists a threat",
+      "lead_p50_hours": 21.8,
+      "lead_p90_hours": 27.1,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 120,
+      "sigma": 1.0,
+      "case": "HIGH (default)",
+      "lead_p50_hours": 32.1,
+      "lead_p90_hours": 53.2,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 120,
+      "sigma": 1.0,
+      "case": "MEDIUM",
+      "lead_p50_hours": 25.8,
+      "lead_p90_hours": 44.9,
+      "reduction_vs_high_pct": 20
+    },
+    {
+      "median_minutes": 120,
+      "sigma": 1.0,
+      "case": "LOW, reviewer accepts a risk",
+      "lead_p50_hours": 25.8,
+      "lead_p90_hours": 44.9,
+      "reduction_vs_high_pct": 20
+    },
+    {
+      "median_minutes": 120,
+      "sigma": 1.0,
+      "case": "LOW, clean review",
+      "lead_p50_hours": 16.1,
+      "lead_p90_hours": 31.1,
+      "reduction_vs_high_pct": 50
+    },
+    {
+      "median_minutes": 120,
+      "sigma": 1.0,
+      "case": "LOW, design lists a threat",
+      "lead_p50_hours": 32.1,
+      "lead_p90_hours": 53.2,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 480,
+      "sigma": 0.5,
+      "case": "HIGH (default)",
+      "lead_p50_hours": 87.4,
+      "lead_p90_hours": 107.8,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 480,
+      "sigma": 0.5,
+      "case": "MEDIUM",
+      "lead_p50_hours": 72.9,
+      "lead_p90_hours": 92.4,
+      "reduction_vs_high_pct": 17
+    },
+    {
+      "median_minutes": 480,
+      "sigma": 0.5,
+      "case": "LOW, reviewer accepts a risk",
+      "lead_p50_hours": 73.2,
+      "lead_p90_hours": 92.8,
+      "reduction_vs_high_pct": 16
+    },
+    {
+      "median_minutes": 480,
+      "sigma": 0.5,
+      "case": "LOW, clean review",
+      "lead_p50_hours": 46.3,
+      "lead_p90_hours": 61.0,
+      "reduction_vs_high_pct": 47
+    },
+    {
+      "median_minutes": 480,
+      "sigma": 0.5,
+      "case": "LOW, design lists a threat",
+      "lead_p50_hours": 87.4,
+      "lead_p90_hours": 107.8,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 480,
+      "sigma": 1.0,
+      "case": "HIGH (default)",
+      "lead_p50_hours": 126.8,
+      "lead_p90_hours": 206.9,
+      "reduction_vs_high_pct": 0
+    },
+    {
+      "median_minutes": 480,
+      "sigma": 1.0,
+      "case": "MEDIUM",
+      "lead_p50_hours": 101.5,
+      "lead_p90_hours": 173.6,
+      "reduction_vs_high_pct": 20
+    },
+    {
+      "median_minutes": 480,
+      "sigma": 1.0,
+      "case": "LOW, reviewer accepts a risk",
+      "lead_p50_hours": 101.7,
+      "lead_p90_hours": 175.2,
+      "reduction_vs_high_pct": 20
+    },
+    {
+      "median_minutes": 480,
+      "sigma": 1.0,
+      "case": "LOW, clean review",
+      "lead_p50_hours": 62.4,
+      "lead_p90_hours": 121.2,
+      "reduction_vs_high_pct": 51
+    },
+    {
+      "median_minutes": 480,
+      "sigma": 1.0,
+      "case": "LOW, design lists a threat",
+      "lead_p50_hours": 126.8,
+      "lead_p90_hours": 206.9,
+      "reduction_vs_high_pct": 0
+    }
+  ]
+}

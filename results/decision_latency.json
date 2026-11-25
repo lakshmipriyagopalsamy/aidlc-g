@@ -1,0 +1,77 @@
+{
+  "assumed_minutes_per_human_step": 120,
+  "rows": [
+    {
+      "case": "HIGH (default)",
+      "released": true,
+      "effective_tier": "HIGH",
+      "signals": [
+        "RISK_ACCEPTED"
+      ],
+      "human_decisions": 11,
+      "policy_decisions": 0,
+      "critical_path_minutes": 840,
+      "lead_time_minutes": 1080,
+      "escalations": 0,
+      "catch_up": []
+    },
+    {
+      "case": "MEDIUM",
+      "released": true,
+      "effective_tier": "MEDIUM",
+      "signals": [
+        "RISK_ACCEPTED"
+      ],
+      "human_decisions": 9,
+      "policy_decisions": 3,
+      "critical_path_minutes": 720,
+      "lead_time_minutes": 960,
+      "escalations": 0,
+      "catch_up": []
+    },
+    {
+      "case": "LOW, reviewer accepts a risk",
+      "released": true,
+      "effective_tier": "MEDIUM",
+      "signals": [
+        "RISK_ACCEPTED"
+      ],
+      "human_decisions": 9,
+      "policy_decisions": 3,
+      "critical_path_minutes": 960,
+      "lead_time_minutes": 960,
+      "escalations": 1,
+      "catch_up": [
+        "TR-NOTIFY@v1 engineering_lead"
+      ]
+    },
+    {
+      "case": "LOW, clean review",
+      "released": true,
+      "effective_tier": "LOW",
+      "signals": [],
+      "human_decisions": 6,
+      "policy_decisions": 6,
+      "critical_path_minutes": 360,
+      "lead_time_minutes": 600,
+      "escalations": 0,
+      "catch_up": []
+    },
+    {
+      "case": "LOW, design lists a threat",
+      "released": true,
+      "effective_tier": "HIGH",
+      "signals": [
+        "SECURITY_RELEVANT_DESIGN"
+      ],
+      "human_decisions": 12,
+      "policy_decisions": 0,
+      "critical_path_minutes": 840,
+      "lead_time_minutes": 1080,
+      "escalations": 1,
+      "catch_up": [
+        "TR-NOTIFY@v1 engineering_lead"
+      ]
+    }
+  ]
+}

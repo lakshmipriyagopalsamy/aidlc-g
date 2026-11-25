@@ -1,0 +1,189 @@
+{
+  "targeted": [
+    {
+      "changed": "C0",
+      "new_version": 2,
+      "expected": [
+        "AC-NOTIFY",
+        "BR-NOTIFY",
+        "DOCS-NOTIFY",
+        "REL-NOTIFY",
+        "STORIES-NOTIFY",
+        "TR-NOTIFY",
+        "build:BLD-1",
+        "build:BLD-STUB-1"
+      ],
+      "invalidated": [
+        "AC-NOTIFY",
+        "BR-NOTIFY",
+        "DOCS-NOTIFY",
+        "REL-NOTIFY",
+        "STORIES-NOTIFY",
+        "TR-NOTIFY",
+        "build:BLD-1",
+        "build:BLD-STUB-1"
+      ],
+      "missed": [],
+      "extra": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "stale_approvals_aidlcg": 0,
+      "stale_approvals_no_invalidation": 9,
+      "reapprovals_targeted": 10,
+      "reapprovals_restart_all": 10,
+      "rebuild_needed": true,
+      "stage_reverify": "BLOCK_WITH_REASONS"
+    },
+    {
+      "changed": "C1",
+      "new_version": 2,
+      "expected": [
+        "AC-NOTIFY",
+        "DOCS-NOTIFY",
+        "REL-NOTIFY",
+        "STORIES-NOTIFY",
+        "TR-NOTIFY",
+        "build:BLD-1",
+        "build:BLD-STUB-1"
+      ],
+      "invalidated": [
+        "AC-NOTIFY",
+        "DOCS-NOTIFY",
+        "REL-NOTIFY",
+        "STORIES-NOTIFY",
+        "TR-NOTIFY",
+        "build:BLD-1",
+        "build:BLD-STUB-1"
+      ],
+      "missed": [],
+      "extra": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "stale_approvals_aidlcg": 0,
+      "stale_approvals_no_invalidation": 8,
+      "reapprovals_targeted": 9,
+      "reapprovals_restart_all": 10,
+      "rebuild_needed": true,
+      "stage_reverify": "BLOCK_WITH_REASONS"
+    },
+    {
+      "changed": "C2",
+      "new_version": 2,
+      "expected": [
+        "AC-NOTIFY",
+        "DOCS-NOTIFY",
+        "REL-NOTIFY",
+        "STORIES-NOTIFY",
+        "build:BLD-1",
+        "build:BLD-STUB-1"
+      ],
+      "invalidated": [
+        "AC-NOTIFY",
+        "DOCS-NOTIFY",
+        "REL-NOTIFY",
+        "STORIES-NOTIFY",
+        "build:BLD-1",
+        "build:BLD-STUB-1"
+      ],
+      "missed": [],
+      "extra": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "stale_approvals_aidlcg": 0,
+      "stale_approvals_no_invalidation": 7,
+      "reapprovals_targeted": 8,
+      "reapprovals_restart_all": 10,
+      "rebuild_needed": true,
+      "stage_reverify": "BLOCK_WITH_REASONS"
+    },
+    {
+      "changed": "STORIES",
+      "new_version": 2,
+      "expected": [
+        "AC-NOTIFY",
+        "DOCS-NOTIFY",
+        "REL-NOTIFY",
+        "build:BLD-1",
+        "build:BLD-STUB-1"
+      ],
+      "invalidated": [
+        "AC-NOTIFY",
+        "DOCS-NOTIFY",
+        "REL-NOTIFY",
+        "build:BLD-1",
+        "build:BLD-STUB-1"
+      ],
+      "missed": [],
+      "extra": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "stale_approvals_aidlcg": 0,
+      "stale_approvals_no_invalidation": 5,
+      "reapprovals_targeted": 7,
+      "reapprovals_restart_all": 10,
+      "rebuild_needed": true,
+      "stage_reverify": "BLOCK_WITH_REASONS"
+    },
+    {
+      "changed": "C3",
+      "new_version": 2,
+      "expected": [
+        "DOCS-NOTIFY",
+        "REL-NOTIFY",
+        "build:BLD-1",
+        "build:BLD-STUB-1"
+      ],
+      "invalidated": [
+        "DOCS-NOTIFY",
+        "REL-NOTIFY",
+        "build:BLD-1",
+        "build:BLD-STUB-1"
+      ],
+      "missed": [],
+      "extra": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "stale_approvals_aidlcg": 0,
+      "stale_approvals_no_invalidation": 3,
+      "reapprovals_targeted": 5,
+      "reapprovals_restart_all": 10,
+      "rebuild_needed": true,
+      "stage_reverify": "BLOCK_WITH_REASONS"
+    },
+    {
+      "changed": "DOCS",
+      "new_version": 2,
+      "expected": [
+        "REL-NOTIFY"
+      ],
+      "invalidated": [
+        "REL-NOTIFY"
+      ],
+      "missed": [],
+      "extra": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "stale_approvals_aidlcg": 0,
+      "stale_approvals_no_invalidation": 1,
+      "reapprovals_targeted": 3,
+      "reapprovals_restart_all": 10,
+      "rebuild_needed": false,
+      "stage_reverify": "BLOCK_WITH_REASONS"
+    }
+  ],
+  "concurrency": {
+    "transition_first": 20,
+    "change_first": 20,
+    "violations": 0,
+    "readmitted": 0,
+    "runs": 40
+  },
+  "summary": {
+    "cases": 6,
+    "exact": 6,
+    "stale_aidlcg": 0,
+    "stale_no_invalidation": 33,
+    "reapprovals_targeted": 42,
+    "reapprovals_restart_all": 60
+  }
+}
